@@ -25,7 +25,8 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class ProductsListFragment : Fragment(R.layout.fragment_product_list) {
 
-    private val binding by viewBinding(FragmentProductListBinding::bind)
+    val binding by viewBinding(FragmentProductListBinding::bind)
+
     private val productsListViewModel: ProductsListViewModel by viewModels()
 
     private val productsListAdapter: ProductsListAdapter by lazy {
