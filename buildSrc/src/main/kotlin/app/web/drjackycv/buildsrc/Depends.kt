@@ -27,6 +27,7 @@ object Depends {
         const val designSupportVersion = "28.0.0"
         const val coreKtxVersion = "1.3.2"
         const val navigationVersion = "2.3.1"
+        const val composeNavigationVersion = "1.0.0-alpha02"
         const val pagingVersion = "3.0.0-alpha09"//"2.1.2"
         const val multidexVersion = "2.0.1"
         const val fragmentExtVersion = "1.2.5"
@@ -116,9 +117,9 @@ object Depends {
         const val constraintlayout =
             "androidx.constraintlayout:constraintlayout:${Versions.constraintLayoutVersion}"
         const val navigation_fragment_ktx =
-            "android.arch.navigation:navigation-fragment-ktx:${Versions.navigationVersion}"
+            "androidx.navigation:navigation-fragment-ktx:${Versions.navigationVersion}"
         const val navigation_ui_ktx =
-            "android.arch.navigation:navigation-ui-ktx:${Versions.navigationVersion}"
+            "androidx.navigation:navigation-ui-ktx:${Versions.navigationVersion}"
         const val lifecycle_livedata_ktx =
             "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycleVersion}"
         const val lifecycle_runtime_ktx =
@@ -141,6 +142,8 @@ object Depends {
         const val compose_material = "androidx.compose.material:material:${Versions.composeVersion}"
         const val compose_runtime_saved_instance_state =
             "androidx.compose.runtime:runtime-saved-instance-state:${Versions.composeVersion}"
+        const val compose_navigation =
+            "androidx.navigation:navigation-compose:${Versions.composeNavigationVersion}"
         const val ui_test = "androidx.ui:ui-test:${Versions.composeVersion}"
         const val ui_tooling = "androidx.ui:ui-tooling:${Versions.composeVersion}"
     }
