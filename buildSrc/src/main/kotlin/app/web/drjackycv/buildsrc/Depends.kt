@@ -6,12 +6,12 @@ object Depends {
 
     object Versions {
         const val appVersionCode = 1_000_000
-        const val gradleVersion = "4.1.1"
+        const val gradleVersion = "4.2.0-alpha16"
         const val androidCompileSdkVersion = 29
         const val targetSdkVersion = 29
         const val minSdkVersion = 21
         const val testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        const val kotlinVersion = "1.4.20"
+        const val kotlinVersion = "1.4.10"
         const val rxKotlinVersion = "2.4.0"
         const val rxAndroidVersion = "2.1.1"
         const val rxJavaVersion = "2.2.20"
@@ -37,6 +37,7 @@ object Depends {
         const val timberVersion = "4.7.1"
         const val lottieVersion = "3.5.0"
         const val glideVersion = "4.11.0"
+        const val composeVersion = "1.0.0-alpha07"
 
         const val mockitoKotlinVersion = "2.2.0"
         const val mockitoCoreVersion = "3.6.0"
@@ -133,6 +134,15 @@ object Depends {
         const val glide = "com.github.bumptech.glide:glide:${Versions.glideVersion}"
         const val glide_compiler = "com.github.bumptech.glide:compiler:${Versions.glideVersion}"
         const val lottie = "com.airbnb.android:lottie:${Versions.lottieVersion}"
+        const val compose_foundation =
+            "androidx.compose.foundation:foundation:${Versions.composeVersion}"
+        const val compose_foundation_layout =
+            "androidx.compose.foundation:foundation-layout:${Versions.composeVersion}"
+        const val compose_material = "androidx.compose.material:material:${Versions.composeVersion}"
+        const val compose_runtime_saved_instance_state =
+            "androidx.compose.runtime:runtime-saved-instance-state:${Versions.composeVersion}"
+        const val ui_test = "androidx.ui:ui-test:${Versions.composeVersion}"
+        const val ui_tooling = "androidx.ui:ui-tooling:${Versions.composeVersion}"
     }
 
     object Environments {

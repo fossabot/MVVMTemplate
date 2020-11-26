@@ -85,6 +85,11 @@ dependencies {
     implementation(app.web.drjackycv.buildsrc.Depends.Libraries.android_core_ktx)
     implementation(app.web.drjackycv.buildsrc.Depends.Libraries.fragment_ktx)
     implementation(app.web.drjackycv.buildsrc.Depends.Libraries.recyclerview)
+    //compose
+    implementation(app.web.drjackycv.buildsrc.Depends.Libraries.compose_foundation)
+    implementation(app.web.drjackycv.buildsrc.Depends.Libraries.compose_foundation_layout)
+    implementation(app.web.drjackycv.buildsrc.Depends.Libraries.compose_material)
+    implementation(app.web.drjackycv.buildsrc.Depends.Libraries.compose_runtime_saved_instance_state)
     //reactive
     implementation(app.web.drjackycv.buildsrc.Depends.Libraries.rx_java_android)
     implementation(app.web.drjackycv.buildsrc.Depends.Libraries.rx_binding3)

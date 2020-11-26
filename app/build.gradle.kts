@@ -9,6 +9,13 @@ plugins {
 }
 
 android {
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerVersion = app.web.drjackycv.buildsrc.Depends.Versions.kotlinVersion
+        kotlinCompilerExtensionVersion = app.web.drjackycv.buildsrc.Depends.Versions.composeVersion
+    }
     compileSdkVersion(app.web.drjackycv.buildsrc.Depends.Versions.androidCompileSdkVersion)
 
     dataBinding {
@@ -83,6 +90,11 @@ dependencies {
     implementation(app.web.drjackycv.buildsrc.Depends.Libraries.android_lifecycle_extensions)
     implementation(app.web.drjackycv.buildsrc.Depends.Libraries.paging_runtime_ktx)
     implementation(app.web.drjackycv.buildsrc.Depends.Libraries.paging_rx_ktx)
+    //compose
+    implementation(app.web.drjackycv.buildsrc.Depends.Libraries.compose_foundation)
+    implementation(app.web.drjackycv.buildsrc.Depends.Libraries.compose_foundation_layout)
+    implementation(app.web.drjackycv.buildsrc.Depends.Libraries.compose_material)
+    implementation(app.web.drjackycv.buildsrc.Depends.Libraries.compose_runtime_saved_instance_state)
     //dependency injection
     implementation(app.web.drjackycv.buildsrc.Depends.Libraries.hilt_android)
     kapt(app.web.drjackycv.buildsrc.Depends.Libraries.hilt_android_compiler)
