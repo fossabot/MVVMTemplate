@@ -29,6 +29,7 @@ android {
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
         freeCompilerArgs = listOf("-XXLanguage:+InlineClasses")
+        useIR = true
     }
     sourceSets {
         map { it.java.srcDir("src/${it.name}/kotlin") }
