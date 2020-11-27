@@ -39,6 +39,9 @@ object Depends {
         const val lottieVersion = "3.5.0"
         const val glideVersion = "4.11.0"
         const val composeVersion = "1.0.0-alpha07"
+        const val uiToolingVersion = "0.1.0-dev17"
+        const val uiFrameworkVersion = "0.1.0-dev10"
+        const val uiVersion = "0.1.0-dev14"
 
         const val mockitoKotlinVersion = "2.2.0"
         const val mockitoCoreVersion = "3.6.0"
@@ -145,7 +148,11 @@ object Depends {
         const val compose_navigation =
             "androidx.navigation:navigation-compose:${Versions.composeNavigationVersion}"
         const val ui_test = "androidx.ui:ui-test:${Versions.composeVersion}"
-        const val ui_tooling = "androidx.ui:ui-tooling:${Versions.composeVersion}"
+        const val ui_tooling = "androidx.ui:ui-tooling:${Versions.uiToolingVersion}"
+        const val ui_framework = "androidx.ui:ui-framework:${Versions.uiFrameworkVersion}"
+        const val ui_foundation = "androidx.ui:ui-foundation:${Versions.uiVersion}"
+        const val ui_layout = "androidx.ui:ui-layout:${Versions.uiVersion}"
+        const val ui_material = "androidx.ui:ui-material:${Versions.uiVersion}"
     }
 
     object Environments {

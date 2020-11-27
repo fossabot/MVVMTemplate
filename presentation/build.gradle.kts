@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 plugins {
     id("com.android.library")
     kotlin("android")
@@ -54,6 +56,28 @@ android {
         }
     }
 
+    packagingOptions {
+        exclude("META-INF/rxjava.properties")
+        exclude("META-INF/proguard/androidx-annotations.pro")
+        exclude("error_prone/Annotations.gwt.xml")
+        exclude("third_party/java_src/error_prone/project/annotations/Annotations.gwt.xml")
+        exclude("third_party/java_src/error_prone/project/annotations/Google_internal.gwt.xml")
+        exclude("jsr305_annotations/Jsr305_annotations.gwt.xml")
+        exclude("META-INF/AL2.0")
+        exclude("META-INF/LGPL2.1")
+    }
+
+}
+
+tasks.withType<KotlinCompile> {
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+        freeCompilerArgs = listOf(
+            "-XXLanguage:+InlineClasses",
+            "-Xallow-jvm-ir-dependencies",
+            "-Xskip-prerelease-check"
+        )
+    }
 }
 
 dependencies {
@@ -91,6 +115,12 @@ dependencies {
     implementation(app.web.drjackycv.buildsrc.Depends.Libraries.compose_material)
     implementation(app.web.drjackycv.buildsrc.Depends.Libraries.compose_runtime_saved_instance_state)
     implementation(app.web.drjackycv.buildsrc.Depends.Libraries.compose_navigation)
+    implementation(app.web.drjackycv.buildsrc.Depends.Libraries.ui_test)
+    implementation(app.web.drjackycv.buildsrc.Depends.Libraries.ui_tooling)
+    implementation(app.web.drjackycv.buildsrc.Depends.Libraries.ui_framework)
+    implementation(app.web.drjackycv.buildsrc.Depends.Libraries.ui_foundation)
+    implementation(app.web.drjackycv.buildsrc.Depends.Libraries.ui_layout)
+    implementation(app.web.drjackycv.buildsrc.Depends.Libraries.ui_material)
     //reactive
     implementation(app.web.drjackycv.buildsrc.Depends.Libraries.rx_java_android)
     implementation(app.web.drjackycv.buildsrc.Depends.Libraries.rx_binding3)
